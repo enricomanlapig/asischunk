@@ -1,0 +1,4 @@
+Name: asis code chunk
+Description: Inserts ```{asis}\n\n```
+Binding: asis_chunk
+Interactive: false

@@ -1,0 +1,12 @@
+Package: asischunk
+Title: asis code chunk addin
+Version: 0.1.0
+Date: 2021-08-12
+Author: Enrico Manlapig
+Maintainer: Enrico Manlapig <emanlapig@westmont.edu>
+Description: Addin for RStudio for inserting asis chunks. Useful for creating branching documents where markdown code is run conditionally.
+License: GPL-3
+Encoding: UTF-8
+Imports:
+    rstudioapi (>= 0.5)
+RoxygenNote: 7.1.1
