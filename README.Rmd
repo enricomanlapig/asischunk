@@ -49,20 +49,19 @@ The `asis` engine allows users to write markdown within chunks.  These chunks ca
 ## Example
 
 ````
-```{r}`r''`
+```{r}
 solutions <- TRUE
 ```
 
 What is half of $4x$?
 
-```{asis student_prompt, include = !solutions}`r''`
+```{asis student_prompt, include = !solutions}
 Write your answer here: 
 ```
 
-```{asis instructor_solutions, include = solutions}`r''`
+```{asis instructor_solutions, include = solutions}
 Correct answer: $\frac{4x}{2}= 2x$
 ```
-
 ````
 
 If the object `solutions` takes the value `FALSE`, then the first chunk, `student_prompt`, is rendered. If `solutions` takes the value `TRUE`, then the second chunk, `instructor_solutions`, is rendered. 
