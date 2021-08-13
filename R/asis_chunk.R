@@ -39,24 +39,3 @@ asis_chunk <- function() {
 
 }
 
-
-asis_chunk_include <- function() {
-
-  # Insert backticks and asis engine call
-    rstudioapi::insertText("```{asis}\n\n```")
-
-
-  # Get document context
-  # to get cursor position
-  adc <- rstudioapi::getActiveDocumentContext()
-
-  # Get cursor position
-  start <- adc$selection[1][[1]]$range$start
-
-  # Set cursor in-between chunks
-  rstudioapi::setCursorPosition(c(start['row'] -1, 1), id = NULL)
-
-
-}
-
-
