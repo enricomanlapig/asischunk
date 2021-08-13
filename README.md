@@ -45,6 +45,12 @@ the YAML or elsewhere in the document.
 
 ## Example
 
+By assigning the addin a keyboard shortcut, the addin gives the user a
+shortcut to the `asis` engine. The `asis` function is useful when the
+author intends to create different texts from the same document. For
+example, a teacher may want to render a version with a prompt for
+students and another version with solutions.
+
     ```{r toggle_solutions}
     solutions <- TRUE
     ```
