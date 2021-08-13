@@ -23,19 +23,26 @@
 #' Press \code{Execute}.
 asis_chunk <- function() {
 
-  # Insert text that splits the code chunk in two
-  rstudioapi::insertText("```{asis}\n\n```")
-
   # Get document context
-  # to get cursor position
   adc <- rstudioapi::getActiveDocumentContext()
+
+  # Select text
+  selection <- adc$selection
+  text <- unlist(selection)["text"]
 
   # Get cursor position
   start <- adc$selection[1][[1]]$range$start
+  end <- adc$selection[1][[1]]$range$end
 
-  # Set cursor in-between chunks
-  rstudioapi::setCursorPosition(c(start['row'] -1, 1), id = NULL)
+  # Insert backticks and asis engine call around text
+  rstudioapi::insertText(paste("```{asis}\n",
+                               text,
+                               "\n```",
+                               sep = ""))
 
+
+  # Set at end of start row
+  rstudioapi::setCursorPosition(c(start['row'], 10), id = NULL)
 
 }
 
