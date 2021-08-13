@@ -32,17 +32,27 @@ asis_chunk <- function() {
 
   # Get cursor position
   start <- adc$selection[1][[1]]$range$start
-  end <- adc$selection[1][[1]]$range$end
+  start_col <- adc$selection[[1]]$range$end["column"]
 
   # Insert backticks and asis engine call around text
-  rstudioapi::insertText(paste("```{asis}\n",
-                               text,
-                               "\n```",
-                               sep = ""))
+  if (start_col == 1){
+    rstudioapi::insertText(paste0("```{asis}\n",
+                                  text,
+                                  "\n```\n",
+                                  sep = ""))
+    rstudioapi::setCursorPosition(c(start['row'], 10), id = NULL)
+
+  } else{
+    rstudioapi::insertText(paste0("\n```{asis}\n",
+                                  text,
+                                  "\n```\n",
+                                  sep = ""))
+    # Set at end of start row
+    rstudioapi::setCursorPosition(c(start['row']+1, 10), id = NULL)
+
+  }
 
 
-  # Set at end of start row
-  rstudioapi::setCursorPosition(c(start['row'], 10), id = NULL)
 
 }
 
