@@ -5,15 +5,7 @@
 
 R package: Insert asis code chunk in R Markdown. Addin for RStudio.
 
-If an object `params` exists, inserts
-
 Inserts:
-
-> ´´´{asis, include = params\[1\]}
->
-> ´´´
-
-Otherwise:
 
 > ´´´{asis}
 >
@@ -32,7 +24,7 @@ Development version:
 
 > install.packages(“devtools”)
 >
-> devtools::install\_github(“EnricoManlapig/asis\_chunk”)
+> devtools::install\_github(“EnricoManlapig/asischunk”)
 
 ## Use
 

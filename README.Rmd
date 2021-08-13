@@ -38,7 +38,7 @@ Development version:
 
 > install.packages("devtools")
 >
-> devtools::install_github("EnricoManlapig/asis_chunk")  
+> devtools::install_github("EnricoManlapig/asischunk")  
 
 ## Use
 
