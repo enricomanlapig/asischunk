@@ -44,16 +44,19 @@ the YAML or elsewhere in the document.
 
 ## Example
 
-
-    ```r
+    ```{r toggle_solutions}
     solutions <- TRUE
     ```
 
     What is half of $4x$?
 
+    ```{asis student_prompt, include = !solutions}
+    Write your answer here: 
+    ```
 
-
+    ```{asis instructor_solutions, include = solutions}
     Correct answer: $\frac{4x}{2}= 2x$
+    ```
 
 If the object `solutions` takes the value `FALSE`, then the first chunk,
 `student_prompt`, is rendered. If `solutions` takes the value `TRUE`,

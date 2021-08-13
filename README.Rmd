@@ -49,17 +49,17 @@ The `asis` engine allows users to write markdown within chunks.  These chunks ca
 ## Example
 
 ````
-```{r}
+```{r toggle_solutions}`r ''`
 solutions <- TRUE
 ```
 
 What is half of $4x$?
 
-```{asis student_prompt, include = !solutions}
+```{asis student_prompt, include = !solutions}`r ''`
 Write your answer here: 
 ```
 
-```{asis instructor_solutions, include = solutions}
+```{asis instructor_solutions, include = solutions}`r ''`
 Correct answer: $\frac{4x}{2}= 2x$
 ```
 ````
