@@ -7,11 +7,10 @@
 asis_chunk()
 }
 \value{
-Inserts \code{```{asis}\\n\\n```} or \code{```{asis, include = params[1]}\\n\\n```} if \code{params} are defined.
+Inserts \code{```{asis}\\n\\n```}
 }
 \description{
 Addin for RStudio for inserting asis chunks. Useful for creating branching documents where markdown code is run conditionally.
-If \code{params} are defined in the document YAML, the function returns the first parameter.
 
 See \code{details} for setting up key command.
 }

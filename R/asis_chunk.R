@@ -1,12 +1,12 @@
 
 #' @title asischunk code
 #' @description Addin for RStudio for inserting asis chunks. Useful for creating branching documents where markdown code is run conditionally.
-#' If \code{params} are defined in the document YAML, the function returns the first parameter.
 #'
 #' See \code{details} for setting up key command.
 #' @author Enrico Manlapig, \email{emanlapig@westmont.edu}
 #' @export
-#' @return Inserts \code{```{asis}\\n\\n```} or \code{```{asis, include = params[1]}\\n\\n```} if \code{params} are defined.
+#' @return Inserts \code{```{asis}\\n\\n```}
+#' @license: GPL-3
 #' @details How to set up key command in RStudio:
 #'
 #' After installing package.
@@ -42,12 +42,8 @@ asis_chunk <- function() {
 
 asis_chunk_include <- function() {
 
-  # Insert text that splits the code chunk in two
-  if (exists("params")){
-    rstudioapi::insertText("```{asis, include = params[1]}\n\n```")
-  } else{
+  # Insert backticks and asis engine call
     rstudioapi::insertText("```{asis}\n\n```")
-  }
 
 
   # Get document context
