@@ -3,15 +3,16 @@
 
 # asis\_chunk
 
-Insert code chunk into R Markdown documents. An RStudio addin.
+Insert code chunk calling asis engine into R Markdown documents. An
+RStudio addin.
 
 Inserts:
 
-> ´´´{asis}
->
-> ´´´
+By Enrico Manlapig
 
-By Enrico Manlapig <emanlapig@westmont.edu>
+-   Email: <emanlapig@westmont.edu>
+
+-   Web: <https://emanlapig.net>
 
 Main functions:
 
